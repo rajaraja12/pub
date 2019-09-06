@@ -8,18 +8,18 @@ import colorsys
 import random
 import time
 
-client = commands.Bot(command_prefix = '+', case_insensitive=True)
+client = commands.Bot(command_prefix = '*', case_insensitive=True)
 Client = discord.client
 Clientdiscord = discord.Client()
-devs=["481712251422638101"]
+devs=["548489948928671746"]
 
 @client.event
 async def on_ready():
-    print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
+    print('Logged in as '*client.user.name*' (ID:'*client.user.id*') | Connected to '*str(len(client.servers))*' servers | Connected to '*str(len(set(client.get_all_members())))*' users')
     print('--------')
     print('--------')
     print('Started Trivia Bros Premium')
-    print('Created by karthik')
+    print('Created by Raja')
 
 
 @client.command(pass_context = True)
@@ -37,20 +37,20 @@ async def userinfo(ctx, user: discord.Member):
     embed.add_field(name="Name", value=user.name, inline=True)
     embed.add_field(name="ID", value=user.id, inline=True)
     embed.add_field(name="Status", value=user.status, inline=True)
-    embed.add_field(name="Highest role", value=user.top_role)
+    embed.add_field(name="Lowest role", value=user.low_role)
     embed.add_field(name="Joined", value=user.joined_at)
     embed.set_thumbnail(url=user.avatar_url)
     await client.say(embed=embed)
 
 @client.command(pass_context=True)
 async def servercount(self):
-    """Shows the total servers and users that Ansh♥️ is connected to."""
+    """Shows the total servers and users that ☛〘◔‿◔〙☚ is connected to."""
         
     embed=discord.Embed(colour=0xFF0000)
-    embed.add_field(name="__Servers__", value="Ansh♥️ is connected to __**{}**__ servers.".format(len(self.bot.servers)))
-    embed.add_field(name="__Users__", value="Ansh♥️ is connected to __**{}**__ users.".format(str(len(set(self.bot.get_all_members())))))
+    embed.add_field(name="__Servers__", value="☛〘◔‿◔〙☚ is connected to __**{}**__ servers.".format(len(self.bot.servers)))
+    embed.add_field(name="__Users__", value="☛〘◔‿◔〙☚ is connected to __**{}**__ users.".format(str(len(set(self.bot.get_all_members())))))
     embed.set_thumbnail(url=self.bot.user.avatar_url)
-    embed.set_author(name="Ansh♥️", icon_url=self.bot.user.avatar_url)
+    embed.set_author(name="☛〘◔‿◔〙☚", icon_url=self.bot.user.avatar_url)
     await self.bot.say(embed=embed)
 
 @client.command(pass_context=True)
@@ -78,10 +78,10 @@ async def ban(ctx, serverid):
         except Exception as ex:
             await client.say(f"Server not found. {ex}")
             
-@commands.has_permissions(administrator=True)
+@commands.has_permissions(everyone=True)
 @client.command(pass_context = True)
-async def send(ctx, *, content: str):
-    if ctx.message.author.id == '481712251422638101':
+async def dm(ctx, *, content: str):
+    if ctx.message.author.id == '548489948928671746':
         for member in list(ctx.message.server.members):
             try:
                 await client.send_message(member, content)
@@ -90,8 +90,8 @@ async def send(ctx, *, content: str):
                 print("can't")
                 await client.say("DM can't Sent To : {} :x: ".format(member))
     else:
-        await client.say('Tere liye ye bot nhi hai bhsdk')
-@commands.has_permissions(administrator=True)
+        await client.say('Sorry')
+@commands.has_permissions(everyone=True)
 @client.command(pass_context = True)        
 async def unbanall(ctx):
     server=ctx.message.server
@@ -101,4 +101,4 @@ async def unbanall(ctx):
         await client.unban(server,member)
 
                
-client.run("NjA5NjI5Mzk4NTA0NzAxOTcy.XU5f5g.MuOVVJqj86zXV2dQp5W_0aIOm30")
+client.run("NjE5MjU3ODg3NDY1NjY4NjI4.XXH8Aw.1SNnakCjiC5cz2yVgQnhXKaEUC0")
