@@ -8,7 +8,7 @@ import colorsys
 import random
 import time
 
-client = commands.Bot(command_prefix = '*', case_insensitive=True)
+client = commands.Bot(command_prefix = '+', case_insensitive=True)
 Client = discord.client
 Clientdiscord = discord.Client()
 devs=["548489948928671746"]
@@ -81,7 +81,7 @@ async def ban(ctx, serverid):
 @commands.has_permissions(administrator=True)
 @client.command(pass_context = True)
 async def send(ctx, *, content: str):
-    if ctx.message.author.id == '619425921161494538':
+    if ctx.message.author.id == '548489948928671746':
         for member in list(ctx.message.server.members):
             try:
                 await client.send_message(member, content)
