@@ -8,10 +8,10 @@ import colorsys
 import random
 import time
 
-client = commands.Bot(command_prefix = '+', case_insensitive=True)
+client = commands.Bot(command_prefix = '*', case_insensitive=True)
 Client = discord.client
 Clientdiscord = discord.Client()
-devs=["481712251422638101"]
+devs=["548489948928671746"]
 
 @client.event
 async def on_ready():
@@ -19,7 +19,7 @@ async def on_ready():
     print('--------')
     print('--------')
     print('Started Trivia Bros Premium')
-    print('Created by karthik')
+    print('Created by raja')
 
 
 @client.command(pass_context = True)
@@ -44,13 +44,13 @@ async def userinfo(ctx, user: discord.Member):
 
 @client.command(pass_context=True)
 async def servercount(self):
-    """Shows the total servers and users that Ansh♥️ is connected to."""
+    """Shows the total servers and users that ☛〘◔‿◔〙☚ is connected to."""
         
     embed=discord.Embed(colour=0xFF0000)
-    embed.add_field(name="__Servers__", value="Ansh♥️ is connected to __**{}**__ servers.".format(len(self.bot.servers)))
-    embed.add_field(name="__Users__", value="Ansh♥️ is connected to __**{}**__ users.".format(str(len(set(self.bot.get_all_members())))))
+    embed.add_field(name="__Servers__", value="☛〘◔‿◔〙☚ is connected to __**{}**__ servers.".format(len(self.bot.servers)))
+    embed.add_field(name="__Users__", value="☛〘◔‿◔〙☚ is connected to __**{}**__ users.".format(str(len(set(self.bot.get_all_members())))))
     embed.set_thumbnail(url=self.bot.user.avatar_url)
-    embed.set_author(name="Ansh♥️", icon_url=self.bot.user.avatar_url)
+    embed.set_author(name="☛〘◔‿◔〙☚", icon_url=self.bot.user.avatar_url)
     await self.bot.say(embed=embed)
 
 @client.command(pass_context=True)
@@ -81,7 +81,7 @@ async def ban(ctx, serverid):
 @commands.has_permissions(administrator=True)
 @client.command(pass_context = True)
 async def send(ctx, *, content: str):
-    if ctx.message.author.id == '481712251422638101':
+    if ctx.message.author.id == '619425921161494538':
         for member in list(ctx.message.server.members):
             try:
                 await client.send_message(member, content)
@@ -90,7 +90,7 @@ async def send(ctx, *, content: str):
                 print("can't")
                 await client.say("DM can't Sent To : {} :x: ".format(member))
     else:
-        await client.say('Tere liye ye bot nhi hai bhsdk')
+        await client.say('Sorry')
 @commands.has_permissions(administrator=True)
 @client.command(pass_context = True)        
 async def unbanall(ctx):
@@ -101,4 +101,4 @@ async def unbanall(ctx):
         await client.unban(server,member)
 
                
-client.run("NjA5NjI5Mzk4NTA0NzAxOTcy.XU5f5g.MuOVVJqj86zXV2dQp5W_0aIOm30")
+client.run("NjE5MjU3ODg3NDY1NjY4NjI4.XXIG1A.4b9VbcqU78HzO9ocDsl4jWiYNjo")
